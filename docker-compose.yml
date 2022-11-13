@@ -8,14 +8,14 @@ services:
     ports:
       - "3306:3306"
     environment:
-#      - MYSQL_ROOT_PASSWORD=root
+      #      - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=achatdb
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
 
 
   spring_app:
-    image: ousskh63/achat
+    image: ousskh63/achat:2.0
     container_name: achatBackEnd
     restart: on-failure
     environment:
