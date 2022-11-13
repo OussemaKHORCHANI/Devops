@@ -74,7 +74,7 @@ pipeline {
    }
      post {
        always {
-          mail to: 'ousskh63@gmail.com',
+          mail to: 'oussema.khorchani@esprit.tn',
              subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
              body: "${env.BUILD_URL} has result ${currentBuild.result}"
        }
