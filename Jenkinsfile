@@ -63,10 +63,11 @@ pipeline {
 //                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
 //                 sh 'docker push ousskh63/achat:2.0'
 //                 }
-// 		}
+// 	//	}
 		stage('Run Docker-compose') {
                 steps {
                   	sh "docker-compose up -d"
+                  	echo "wassim"
             	}
         }
 
