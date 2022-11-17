@@ -15,7 +15,7 @@ services:
 
 
   spring_app:
-    image: walid0519/achat:3.0
+    image: walid0519/achat:4.0
     container_name: achatBackEnd
     restart: on-failure
     environment:
