@@ -56,13 +56,13 @@ pipeline {
 
         stage('Building Docker Image'){
          steps {
-             sh 'docker build -t walid0519/achat .'
+             sh 'docker build -t walid0519/achat:4.0 .'
           }
         }
         stage('Pushing Docker image') {
             steps {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
-                sh 'docker push walid0519/achat'
+                sh 'docker push walid0519/achat:4.0'
            }
         }
         stage('Run Docker-compose') {
